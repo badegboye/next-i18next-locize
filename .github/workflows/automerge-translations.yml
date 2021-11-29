@@ -40,4 +40,4 @@ jobs:
           required-labels: automerge
           pull-request: ${{ github.event.inputs.pull-request }}
           pull-request-author-associations: badegboye
-          dry-run: true
+          # dry-run: true
