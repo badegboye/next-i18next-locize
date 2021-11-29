@@ -25,4 +25,5 @@ jobs:
         uses: 'pascalgn/automerge-action@v0.14.3'
         env:
           MERGE_LABELS: ''
+          MERGE_FILTER_AUTHOR: 'bddddd'
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
