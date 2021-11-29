@@ -1,0 +1,41 @@
+name: automerge
+
+on:
+  schedule:
+    - cron: 0 * * * *
+  pull_request_target:
+    types:
+      - opened
+      - synchronized
+      - reopened
+      - edited
+      - labeled
+      - unlabeled
+      - ready_for_review
+  workflow_dispatch:
+    inputs:
+      pull-request:
+        description: Pull Request Number
+        required: false
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Event
+        run: |
+          echo "${EVENT_NAME}"
+          echo "${EVENT_JSON}"
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          EVENT_JSON: ${{ toJSON(github.event) }}
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - uses: ./
+        with:
+          token: ${{ secrets.TOKEN }}
+          squash-title: true
+          do-not-merge-labels: never-merge
+          # required-labels: automerge
+          pull-request: ${{ github.event.inputs.pull-request }}
