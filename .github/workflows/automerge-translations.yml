@@ -36,8 +36,8 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           merge-method: rebase
-          do-not-merge-labels: never-merge
-          required-labels: automerge
+          # do-not-merge-labels: never-merge
+          # required-labels: automerge
           pull-request: ${{ github.event.inputs.pull-request }}
           # pull-request-author-associations: badegboye
           # dry-run: true
