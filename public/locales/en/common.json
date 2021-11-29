@@ -1,7 +1,7 @@
 {
-  "change-locale": "Changing locale",
-  "error-with-status": "A {{statusCode}} error occurred on server",
-  "error-without-status": "An error occurred on the server",
-  "h1": "A simple example",
-  "to-second-page": "To second page"
+    "to-second-page": "To second page",
+    "h1": "A second page, to demonstrate routing",
+    "error-without-status": "An error occurred on the server",
+    "error-with-status": "A {{statusCode}} error occurred on server",
+    "change-locale": "Change bizzle locale"
 }
