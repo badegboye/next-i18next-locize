@@ -1,12 +1,17 @@
 name: Automerge Translations
 
+# on:
+# Try enabling auto-merge for all open pull requests. (Only recommended for testing.)
+# [push,pull_request]
+
 on:
-  # Try enabling auto-merge for all open pull requests. (Only recommended for testing.)
-  push:
+  pull_request:
+    branches:
+      - master
 
   # Try enabling auto-merge for all open pull requests.
-  schedule:
-    - cron: 0 * * * *
+  # schedule:
+  #   - cron: 0 * * * *
 
   # Try enabling auto-merge for a pull request when a draft is marked as “ready for review”, when
   # a required label is applied or when a “do not merge” label is removed, or when a pull request
@@ -22,11 +27,11 @@ on:
       - ready_for_review
 
   # Try enabling auto-merge for the specified pull request or all open pull requests if none is specified.
-  workflow_dispatch:
-     inputs:
-       pull-request:
-         description: Pull Request Number
-         required: false
+  # workflow_dispatch:
+  #   inputs:
+  #     pull-request:
+  #       description: Pull Request Number
+  #       required: false
 
 jobs:
   automerge:
