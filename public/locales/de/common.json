@@ -1,7 +1,7 @@
 {
-    "to-second-page": "Zur zweiten Seite",
-    "h1": "Eine zweite Seite, um das Routing zu demonstrieren",
-    "error-without-status": "Auf dem Server ist ein Fehler aufgetreten",
-    "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
-    "change-locale": "Wechseln Locale"
+  "to-second-page": "Zur zweiten Seite",
+  "h1": "Eine zweite Seite, um das Routing zu demonstrieren",
+  "error-without-status": "Auf dem Server ist ein Fehler aufgetreten",
+  "error-with-status": "Auf dem Server ist ein Fehler ({{statusCode}}) aufgetreten",
+  "change-locale": "Wechseln Locale"
 }
